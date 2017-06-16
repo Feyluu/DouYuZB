@@ -8,12 +8,18 @@
 
 import UIKit
 
+protocol PageTitlesViewDelegate : class {
+    func pageTitlesView(titlesView:PageTitlesView, selectedIndex index:Int)
+}
+
 fileprivate let kScrollViewLineH : CGFloat = 2
 
 class PageTitlesView: UIView {
     
     // 定义属性
+    fileprivate var currentIndex : Int = 0
     fileprivate var titles:[String]
+    weak var delegate:PageTitlesViewDelegate?// 代理最好用weak
     
     // 懒加载属性
     fileprivate lazy var titlesLables:[UILabel] = [UILabel]()
@@ -84,6 +90,10 @@ extension PageTitlesView {
             
             scrollView.addSubview(label)
             titlesLables.append(label)
+            
+            label.isUserInteractionEnabled = true
+            let tapGes = UITapGestureRecognizer.init(target: self, action: #selector(self.titleLabelClick(sender:)))
+            label.addGestureRecognizer(tapGes)
         }
     }
     
@@ -104,5 +114,37 @@ extension PageTitlesView {
         // 2.2 设置scrollLine属性
         scrollView.addSubview(scrollLine)
         scrollLine.frame = CGRect(x: firstLabel.frame.origin.x, y: frame.height-kScrollViewLineH, width: firstLabel.frame.width, height: kScrollViewLineH)
+    }
+}
+
+// 监听label的点击事件
+extension PageTitlesView {
+    
+    @objc fileprivate func titleLabelClick(sender: UITapGestureRecognizer) {
+        
+        guard let currentLabel = sender.view as? UILabel else {
+            print("currentLabel is nil")
+            return
+        }
+        
+        // 2. 获取前一个label
+        let oldLabel = titlesLables[currentIndex]
+        
+        // 3.切换文字的颜色
+        currentLabel.textColor = UIColor.orange
+        oldLabel.textColor = UIColor.lightGray
+        
+        // 4.保存当前label的索引
+        currentIndex = currentLabel.tag
+        
+        // 5.滑动条的位置改变
+        let scrollLineX = CGFloat(currentLabel.tag) * scrollLine.frame.width
+        UIView.animate(withDuration: 0.15) {
+            self.scrollLine.frame.origin.x = scrollLineX
+        }
+        
+        // 6.通知代理
+        delegate?.pageTitlesView(titlesView: self, selectedIndex: currentIndex)
+
     }
 }

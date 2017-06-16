@@ -12,14 +12,15 @@ private let kTitleViewH : CGFloat = 40
 
 class HomeViewController: UIViewController {
     
-    fileprivate lazy var pageTitlesView: PageTitlesView = {
+    fileprivate lazy var pageTitlesView: PageTitlesView = { [weak self] in
         let titleFrame = CGRect(x: 0, y: kNavigationBarH+kStatusBarH, width: kScreenW, height: kTitleViewH)
         let titles = ["推荐","游戏","娱乐","趣玩"];
         let titlesView = PageTitlesView(frame: titleFrame, titles: titles)
+        titlesView.delegate = self
         return titlesView
     }()
     
-    fileprivate lazy var pageContentView: PageContentView = {
+    fileprivate lazy var pageContentView: PageContentView = { [weak self] in
         let contentH = kScreenH - kStatusBarH - kNavigationBarH - kTitleViewH
         let contentFrame = CGRect(x: 0, y: kStatusBarH + kNavigationBarH + kTitleViewH, width: kScreenW, height: contentH)
         
@@ -27,7 +28,7 @@ class HomeViewController: UIViewController {
         var childViewControllers = [UIViewController]()
         for _ in 0..<4 {
             let vc = UIViewController()
-            vc.view.backgroundColor = UIColor.init(r: CGFloat(arc4random_uniform(255)/255), g: CGFloat(arc4random_uniform(255)/255), b: CGFloat(arc4random_uniform(255)/255))
+            vc.view.backgroundColor = UIColor.init(r: CGFloat(arc4random_uniform(255)), g: CGFloat(arc4random_uniform(255)), b: CGFloat(arc4random_uniform(255)))
             childViewControllers.append(vc)
         }
         
@@ -92,4 +93,11 @@ extension HomeViewController {
         
     }
     
+}
+
+// mark - 遵守PageTitlesViewDelegate
+extension HomeViewController : PageTitlesViewDelegate{
+    func pageTitlesView(titlesView: PageTitlesView, selectedIndex index: Int) {
+        pageContentView.setCurrentIndex(currentIndex: index)
+    }
 }
