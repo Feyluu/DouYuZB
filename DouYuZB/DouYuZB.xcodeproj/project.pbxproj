@@ -24,6 +24,11 @@
 		A77E12861EF264DF0003FE87 /* DouYuZBUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77E12851EF264DF0003FE87 /* DouYuZBUITests.swift */; };
 		A77E129C1EF27FE20003FE87 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A77E129A1EF27FE20003FE87 /* Home.storyboard */; };
 		A77E12A61EF281820003FE87 /* Follow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A77E12A41EF281820003FE87 /* Follow.storyboard */; };
+		A7D776C81EF679FA00816CA8 /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D776C71EF679FA00816CA8 /* RecommendViewController.swift */; };
+		A7D776CB1EF6850600816CA8 /* CollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D776C91EF6850600816CA8 /* CollectionHeaderView.swift */; };
+		A7D776CC1EF6850600816CA8 /* CollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7D776CA1EF6850600816CA8 /* CollectionHeaderView.xib */; };
+		A7D776D51EF68D0C00816CA8 /* CollectionNomalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D776D31EF68D0C00816CA8 /* CollectionNomalCell.swift */; };
+		A7D776D61EF68D0C00816CA8 /* CollectionNomalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7D776D41EF68D0C00816CA8 /* CollectionNomalCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +72,11 @@
 		A77E12871EF264DF0003FE87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A77E129B1EF27FE20003FE87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = DouYuZB/Base.lproj/Home.storyboard; sourceTree = SOURCE_ROOT; };
 		A77E12A51EF281820003FE87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = DouYuZB/Base.lproj/Follow.storyboard; sourceTree = SOURCE_ROOT; };
+		A7D776C71EF679FA00816CA8 /* RecommendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
+		A7D776C91EF6850600816CA8 /* CollectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionHeaderView.swift; sourceTree = "<group>"; };
+		A7D776CA1EF6850600816CA8 /* CollectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionHeaderView.xib; sourceTree = "<group>"; };
+		A7D776D31EF68D0C00816CA8 /* CollectionNomalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionNomalCell.swift; sourceTree = "<group>"; };
+		A7D776D41EF68D0C00816CA8 /* CollectionNomalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionNomalCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +125,8 @@
 			children = (
 				A75359C41EF3604600BEE458 /* PageTitlesView.swift */,
 				A75359C81EF3ADAC00BEE458 /* PageContentView.swift */,
+				A7D776D31EF68D0C00816CA8 /* CollectionNomalCell.swift */,
+				A7D776D41EF68D0C00816CA8 /* CollectionNomalCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -124,6 +136,7 @@
 			children = (
 				A77E129A1EF27FE20003FE87 /* Home.storyboard */,
 				A75359BF1EF28A2600BEE458 /* HomeViewController.swift */,
+				A7D776C71EF679FA00816CA8 /* RecommendViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -138,6 +151,8 @@
 		A75359B51EF2898700BEE458 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A7D776C91EF6850600816CA8 /* CollectionHeaderView.swift */,
+				A7D776CA1EF6850600816CA8 /* CollectionHeaderView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -447,7 +462,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7D776D61EF68D0C00816CA8 /* CollectionNomalCell.xib in Resources */,
 				A77E12A61EF281820003FE87 /* Follow.storyboard in Resources */,
+				A7D776CC1EF6850600816CA8 /* CollectionHeaderView.xib in Resources */,
 				A77E12701EF264DE0003FE87 /* LaunchScreen.storyboard in Resources */,
 				A75359AA1EF2871800BEE458 /* Live.storyboard in Resources */,
 				A77E126D1EF264DE0003FE87 /* Assets.xcassets in Resources */,
@@ -479,7 +496,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A77E12661EF264DE0003FE87 /* AppDelegate.swift in Sources */,
+				A7D776CB1EF6850600816CA8 /* CollectionHeaderView.swift in Sources */,
+				A7D776D51EF68D0C00816CA8 /* CollectionNomalCell.swift in Sources */,
 				A75359CB1EF3B01200BEE458 /* UIColor-Extension.swift in Sources */,
+				A7D776C81EF679FA00816CA8 /* RecommendViewController.swift in Sources */,
 				A75359B21EF2897500BEE458 /* MainViewController.swift in Sources */,
 				A75359C31EF2977500BEE458 /* UIBarButtonItem-Extension.swift in Sources */,
 				A75359C91EF3ADAC00BEE458 /* PageContentView.swift in Sources */,

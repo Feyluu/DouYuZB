@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YPp-oZ-4zo">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="10"/>
+                    <color key="backgroundColor" red="0.91764705882352937" green="0.91764705882352937" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="10" id="qH1-d5-oDr"/>
+                    </constraints>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_header_hot" translatesAutoresizingMaskIntoConstraints="NO" id="qgu-5y-rvh">
+                    <rect key="frame" x="11" y="21" width="18" height="18"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="18" id="QQz-U1-ISC"/>
+                        <constraint firstAttribute="height" constant="18" id="mC9-hb-p4f"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="颜值" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="967-pO-Pwc">
+                    <rect key="frame" x="37" y="19.5" width="35" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y3j-Au-O7w">
+                    <rect key="frame" x="265" y="15" width="45" height="30"/>
+                    <state key="normal" title="更多 &gt;">
+                        <color key="titleColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="967-pO-Pwc" firstAttribute="centerY" secondItem="qgu-5y-rvh" secondAttribute="centerY" id="0rx-W0-rHx"/>
+                <constraint firstItem="qgu-5y-rvh" firstAttribute="top" secondItem="YPp-oZ-4zo" secondAttribute="bottom" constant="11" id="4Ic-9T-4Lm"/>
+                <constraint firstItem="qgu-5y-rvh" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" constant="11" id="4nB-dx-xot"/>
+                <constraint firstAttribute="bottom" secondItem="y3j-Au-O7w" secondAttribute="bottom" constant="5" id="5ik-ze-V6Z"/>
+                <constraint firstItem="y3j-Au-O7w" firstAttribute="top" secondItem="YPp-oZ-4zo" secondAttribute="bottom" constant="5" id="IOO-CK-4AV"/>
+                <constraint firstItem="967-pO-Pwc" firstAttribute="leading" secondItem="qgu-5y-rvh" secondAttribute="trailing" constant="8" id="PLm-L5-S9F"/>
+                <constraint firstItem="YPp-oZ-4zo" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="Q6f-7V-bP7"/>
+                <constraint firstItem="qgu-5y-rvh" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" constant="11" id="dHy-RV-z3t"/>
+                <constraint firstItem="qgu-5y-rvh" firstAttribute="top" secondItem="YPp-oZ-4zo" secondAttribute="bottom" constant="11" id="dSC-kF-ft5"/>
+                <constraint firstAttribute="trailing" secondItem="y3j-Au-O7w" secondAttribute="trailing" constant="10" id="ou2-od-0tO"/>
+                <constraint firstItem="YPp-oZ-4zo" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="srA-Pn-q0q"/>
+                <constraint firstAttribute="trailing" secondItem="YPp-oZ-4zo" secondAttribute="trailing" id="xIb-R2-G1z"/>
+            </constraints>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <image name="home_header_hot" width="18" height="18"/>
+    </resources>
+</document>
