@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CollectionNomalCell" customModule="DouYuZB" customModuleProvider="target">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CollectionNormalCell" customModule="DouYuZB" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="266" height="189"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -74,6 +74,12 @@
                 <constraint firstItem="1k8-Ah-Ww3" firstAttribute="centerY" secondItem="CSZ-7p-1Qp" secondAttribute="centerY" id="yzU-zH-evv"/>
             </constraints>
             <size key="customSize" width="266" height="189"/>
+            <connections>
+                <outlet property="iconImageView" destination="tZB-OV-YTb" id="yTm-ta-Mmb"/>
+                <outlet property="nickNameLabel" destination="MIz-7K-0cJ" id="EGf-PB-yhm"/>
+                <outlet property="onlineBtn" destination="ufU-mC-gHP" id="hQC-sU-K8S"/>
+                <outlet property="roomName" destination="MIz-7K-0cJ" id="GPl-Tv-Kij"/>
+            </connections>
             <point key="canvasLocation" x="0.0" y="45.5"/>
         </collectionViewCell>
     </objects>
